@@ -1,0 +1,93 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap'); */
+*{
+    font-family: system-ui;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: linear-gradient(to bottom , #01012e , rgb(5, 5, 92) );
+    height: 100vb;
+    background-repeat: no-repeat;
+
+}
+div{
+    background-image: linear-gradient( to bottom,#01012e , rgba(5, 5, 92, 0.275) ) ,
+    url(../photo/istockphoto-537331500-612x612.jpg);
+    
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul{
+    text-align: center;
+}
+li{
+    list-style: none;
+    margin: 15px;
+}
+a{
+    color: lightblue;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    background-color: blue;
+    padding: 6px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    width: 150px;
+    transition: 0.3s;
+    position: relative;
+    z-index: 20;
+    text-transform: capitalize;
+}
+ul:hover a{
+    opacity: 0;
+}
+ul  a:hover {
+    color: blue;
+    transform: scale(1.5);
+    background-color: lightskyblue;
+    opacity: 1;
+}
+li::after{
+    content: attr(data-text);
+    color :blue;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 80px;
+    font-weight: 900;
+    text-transform: uppercase;
+    opacity: 0;
+    pointer-events: none;  
+    letter-spacing: 50px;
+}
+ul li:hover::after{
+    opacity: 0.5;
+    letter-spacing: 5px;
+    transition:0.3s ;
+}
+ul li::before{
+    content: '' ;
+    width: 800px;
+    height: 80px;
+    color: lightskyblue;
+    background-color: blue;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0 0 80px lightskyblue ;
+    transition: 0.3s;
+    pointer-events: none;  
+}
+li:hover::before{
+    opacity: 0.5;
+    width: 80px;
+}
